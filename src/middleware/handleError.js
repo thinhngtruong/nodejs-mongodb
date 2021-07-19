@@ -7,7 +7,7 @@ const errHandler = (err, req, res, next) => {
         } else {
             res.status(500).send({
                 message:
-                    err.message || "Some err occurred while creating the Tutorial."
+                    err.message || "Some err occurred while creating the Person."
             });
         }
     }
