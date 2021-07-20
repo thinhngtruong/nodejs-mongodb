@@ -56,7 +56,6 @@ router.put('/:id', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
     const { name, number } = req.body;
-    const id = Math.random();
 
     if (!name) {
         return res.status(400).send({
@@ -71,7 +70,6 @@ router.post('/', (req, res, next) => {
     }
 
     const newPerson = new Person({
-        id,
         name,
         number
     })
